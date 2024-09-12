@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%; /* Чтобы body занимал всю высоту экрана */
+    margin: 0; /* Убираем стандартные отступы */
+    background: #f0f7cb;
+}
+
+body {
+    display: flex;
+    justify-content: center; /* Центрируем контейнер по горизонтали */
+    align-items: center; /* Центрируем контейнер по вертикали */
+}
+
+.slider-container {
+    width: calc(100% - 30rem); /* Уменьшение ширины на 8rem (4rem с каждой стороны) */
+    height: calc(100vh - 15rem); /* Уменьшение высоты на 8rem (4rem сверху и снизу) */
+    background: #eaf7aa;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.switch input {
+    display: none;
+}
+
+.controls {
+    position: absolute;
+    bottom: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1rem;
+    z-index: 2;
+}
+
+.controls label {
+    width: 2rem;
+    height: 2rem;
+    background: #f40e0e;
+    border-radius: 2rem;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: .5s;
+}
+
+/* Активная метка */
+#slide1:checked ~ .controls label:nth-child(1) {
+    opacity: 1;
+}
+
+#slide2:checked ~ .controls label:nth-child(2) {
+    opacity: 1;
+}
+
+#slide3:checked ~ .controls label:nth-child(3) {
+    opacity: 1;
+}
+
+.slides {
+    position: static;
+    display: flex;
+    width: 300vw; /* Установим ширину для всех слайдов: 3 слайда = 300vw */
+    transition: transform 0.5s ease-in-out;
+}
+
+.slides .slide {
+    width: 100vw; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slides .slide:nth-child(1) {
+    background: transparent; 
+}
+
+.slides .slide:nth-child(2) {
+    background: transparent; 
+}
+
+.slides .slide:nth-child(3) {
+    background: transparent; 
+}
+
+/* Управление слайдерами с помощью трансформации */
+#slide1:checked ~ .slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .slides {
+    transform: translateX(-100vw);
+}
+
+#slide3:checked ~ .slides {
+    transform: translateX(-200vw);
+}
+
+.content {
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start; 
+    padding: 1rem; 
+    text-align: left; 
+}
+
+.content img {
+    max-width: 100%; 
+    height: auto;
+    border-radius: 1rem; 
+    margin-bottom: 1rem; 
+}
+
+.content h2 {
+    font-size: 2rem; 
+    color: #070101; 
+    font-family: 'Arial', sans-serif; 
+    font-weight: bold;  
+    line-height: 1.2; 
+    margin: 0; 
+}
+
+
