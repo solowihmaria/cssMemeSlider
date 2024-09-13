@@ -24,6 +24,7 @@ body {
     margin: 0 auto;
     padding: 0 10rem;
 }
+
 input[type="radio" i] {
     display: none;
 }
@@ -176,7 +177,101 @@ input[type="radio" i] {
     transform: translateX(-300%);
   }
   
+  @media (max-width: 1024px) {
 
+    .slider {        
+        padding: 0 8rem;
+    }
+
+    .head-item{
+        font-size: 5rem;  
+    }
+
+    .bottom-content {       
+        padding-top: 1.5rem;
+    }
+
+    .controls label {
+        width: 3rem; 
+        height: 4rem; 
+    }
+    
+    .control-inner {
+        width: 2.3rem;
+        height: 2.3rem;        
+    }
+  }
+
+  @media (max-width: 900px) {
+    
+    .head-item{
+        font-size: 4.5rem;  
+    }
+  }
+
+  @media (max-width: 700px) {
+
+    .slider {        
+        padding: 0 6rem;
+    }
+    .head-item{
+        font-size: 4rem;  
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    .slider {        
+        padding: 0 4rem;
+    }
+
+    .bottom-content {       
+        display: flex;
+        flex-direction: column;  
+        width: 100%;
+    }
+
+    .controls {
+        order: 1; 
+        display: flex;
+        justify-content: center; 
+        width: 100%;
+        margin-bottom: 1.5rem;   
+    }
+
+    .descriptions {
+        order: 2; 
+        width: 100%;        
+    }
+
+    .controls label {
+        width: 2.5rem; 
+        height: 3rem; 
+    }
+    
+    .control-inner {
+        width: 1.5rem;
+        height: 1.5rem;        
+    }    
+    .head-item {
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 350px) {
+    
+    .slider {        
+        padding: 0 3rem;
+    }
+
+    .controls {
+        margin-bottom: 1rem;   
+    }
+
+    .head-item{
+        font-size: 3rem;  
+    }
+  }
 
 
 
