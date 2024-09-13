@@ -13,11 +13,11 @@ html, body {
 }
 
 body {
-    height: 100vh; /* Высота на весь экран */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Центрирование по горизонтали */
-    align-items: center; /* Центрирование по вертикали */    
-    margin: 0; /* Убираем отступы */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
 }
 
 
