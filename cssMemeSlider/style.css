@@ -9,7 +9,7 @@
 html, body {
     height: 100%; 
     margin: 0; 
-    background: #f0f7cb;
+    background: #2b4e2b;
 }
 
 body {
@@ -29,7 +29,7 @@ input[type="radio" i] {
 }
 
 .slider-container {
-    background: #eaf7aa;
+    background: #2b4e2b;
     overflow: hidden;
 }
 
@@ -53,7 +53,7 @@ input[type="radio" i] {
 }
 
 .slide img {    
-    border-radius: 1rem; 
+    border-radius: 3rem; 
     width: 100%;
     height: auto;
     display: block;
@@ -83,7 +83,8 @@ input[type="radio" i] {
     display: flex;    
     justify-content: space-between;
     width: 100%;
-    padding: 0.5rem 0rem;
+    padding: 0;
+    padding-top: 2.5rem;
     align-items: center;
 }
 
@@ -94,19 +95,23 @@ input[type="radio" i] {
 
 .headings {
     width: 100%;
-    display: flex;    
+    display: flex;
+    align-items: center;    
     margin: 0;
     padding: 0;
     transition: transform 0.6s ease-in-out;
-    line-height: 3rem;
 }
 
 .head-item{
     list-style-type: none;
-    font-size: 7rem;
-    color: #070101;
+    font-size: 6rem;
+    color: #dbe6d8;
     flex-shrink: 0;
-    width: 100%;
+    width: 100%;    
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+           
 }
 
 .controls {
@@ -130,7 +135,7 @@ input[type="radio" i] {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
-    background: #13010a;
+    background: #c9e5c1;
     border-radius: 50%;
     transition: 0.5s;
     opacity: 0.5;
@@ -138,12 +143,12 @@ input[type="radio" i] {
 
 .controls label:hover .control-inner {
     opacity: 0.9;
-    background-color: #4b2121e6;
+    background-color: #bae1af;
 }
 
 .controls label:active .control-inner {
     transform: scale(0.9); 
-    background-color: #000000; 
+    background-color: #c9e5c1;
 }
 
 
