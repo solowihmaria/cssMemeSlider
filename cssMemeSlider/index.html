@@ -7,40 +7,65 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="slider-container">
-        <div class="switch">
-            <input type="radio" name="slider" id="slide1">
+    <section class="slider">
+        <div class="slider-container">
+
+            <input type="radio" name="slider" id="slide1" checked>
             <input type="radio" name="slider" id="slide2">
-            <input type="radio" name="slider" id="slide3"> 
+            <input type="radio" name="slider" id="slide3">
+            <input type="radio" name="slider" id="slide4">
+
+            <ul class="meme-slides">
+                <li class="slide">
+                    <img src="./assets/img/1.jpg" alt="meme1">  
+                </li>
+                <li class="slide">
+                    <img src="./assets/img/2.jpg" alt="meme2">
+                </li>
+                <li class="slide">
+                    <img src="./assets/img/3.jpg" alt="meme3">   
+                </li>
+                <li class="slide">
+                    <img src="./assets/img/4.jpg" alt=meme4">   
+                </li>                
+            </ul>
                        
-            <div class="controls">
-                <label for="slide1"></label>
-                <label for="slide2"></label>
-                <label for="slide3"></label>
-            </div>
+            
+            <div class="bottom-content">
 
-            <div class="slides">
+                <div class="descriptions">
+                    <ul class="headings">
+                        <li class="head-item">
+                          <p class="title">1</p>
+                        </li>
+                        <li class="head-item">
+                          <p class="title">2</p>
+                        </li>
+                        <li class="head-item">
+                          <p class="title">3</p>
+                        </li>  
+                        <li class="head-item">
+                            <p class="title">4</p>
+                          </li>                                             
+                      </ul>                    
+                </div>
 
-                <div class="slide">
-                    <div class="content">
-                        <img src="./assets/img/1.jpg" alt="pic1">
-                        <h2>lalala1</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content">
-                        <img src="./assets/img/2.jpg" alt="pic2">
-                        <h2>lalala2</h2>
-                    </div>
-                </div>
-                <div class="slide">
-                    <div class="content">
-                        <img src="./assets/img/3.jpg" alt="pic3">
-                        <h2>lalala3</h2>
-                    </div>
-                </div>
+                <div class="controls">
+                    <label for="slide1" class="control"></label>
+                    <label for="slide2" class="control"></label>
+                    <label for="slide3" class="control"></label>
+                    <label for="slide4" class="control"></label>
+                </div>              
+                
             </div>
+ 
         </div>
-    </div>
+
+    </section>
+
+        
+    
+    
+
 </body>
 </html>
