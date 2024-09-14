@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%; /* 1rem = 10px */
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%; 
+    margin: 0; 
+    background: #2b4e2b;
+}
+
+body {
+    height: 100vh; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+}
+
+
+.slider{
+    max-width: 150rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20rem 10rem;
+    height: auto;
+}
+
+input[type="radio" i] {
+    display: none;
+}
+
+.slider-container {
+    background: #2b4e2b;
+    overflow: hidden;
+}
+
+.switch input {
+    display: none;
+}
+
+.meme-slides {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    transition: transform 0.6s ease-in-out;
+    
+}
+
+.meme-slides .slide {
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.slide img {    
+    border-radius: 3rem; 
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Управление слайдерами с помощью трансформации */
+#slide1:checked ~ .meme-slides {
+    transform: translateX(0);
+}
+
+#slide2:checked ~ .meme-slides {
+    transform: translateX(-100%);
+}
+
+#slide3:checked ~ .meme-slides {
+    transform: translateX(-200%);
+}
+
+#slide4:checked ~ .meme-slides {
+    transform: translateX(-300%);
+}
+
+
+
+
+.bottom-content {
+    display: flex;    
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    padding-top: 2.5rem;
+    align-items: center;
+}
+
+.descriptions{
+    width: 50%;
+    overflow: hidden;
+}
+
+.headings {
+    width: 100%;
+    display: flex;
+    align-items: center;    
+    margin: 0;
+    padding: 0;
+    transition: transform 0.6s ease-in-out;
+}
+
+.head-item{
+    list-style-type: none;
+    font-size: 6rem;
+    color: #dbe6d8;
+    flex-shrink: 0;
+    width: 100%;    
+    font-family: "Orelega One", serif;
+    font-weight: 400;
+    font-style: normal;
+           
+}
+
+.controls {
+    display: flex;
+    max-width: 50%;
+    line-height: 4rem;
+}
+
+.controls label {
+    width: 5rem; /* Увеличенная область для клика */
+    height: 6rem; /* Увеличенная область для клика */
+    background: transparent; 
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.control-inner {
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    background: #7bb56c;
+    border-radius: 50%;
+    transition: 0.5s;
+    opacity: 0.5;
+}
+
+.controls label:hover .control-inner {
+    opacity: 0.9;
+    background-color: #cde4c1;
+}
+
+.controls label:active .control-inner {
+    transform: scale(0.9); 
+    background-color: #7bb56c;
+}
+
+
+#slide1:checked ~ .bottom-content .controls label:nth-child(1) .control-inner,
+#slide2:checked ~ .bottom-content .controls label:nth-child(2) .control-inner,
+#slide3:checked ~ .bottom-content .controls label:nth-child(3) .control-inner,
+#slide4:checked ~ .bottom-content .controls label:nth-child(4) .control-inner {
+    opacity: 1;
+}
+
+
+#slide1:checked ~ .bottom-content .headings {
+    transform: translateX(0);
+  }
+  
+#slide2:checked ~ .bottom-content .headings {
+    transform: translateX(-100%);
+  }
+  
+#slide3:checked ~ .bottom-content .headings {
+    transform: translateX(-200%);
+  }
+
+#slide4:checked ~ .bottom-content .headings {
+    transform: translateX(-300%);
+  }
+  
+  @media (max-width: 1024px) {
+
+    .slider {        
+        padding: 0 8rem;
+    }
+
+    .head-item{
+        font-size: 5rem;  
+    }
+
+    .bottom-content {       
+        padding-top: 1.5rem;
+    }
+
+    .controls label {
+        width: 3rem; 
+        height: 4rem; 
+    }
+    
+    .control-inner {
+        width: 2.3rem;
+        height: 2.3rem;        
+    }
+  }
+
+  @media (max-width: 900px) {
+    
+    .head-item{
+        font-size: 4.5rem;  
+    }
+  }
+
+  @media (max-width: 700px) {
+
+    .slider {        
+        padding: 0 6rem;
+    }
+    .head-item{
+        font-size: 4rem;  
+    }
+  }
+
+  @media (max-width: 500px) {
+
+    .slider {        
+        padding: 0 4rem;
+    }
+
+    .bottom-content {       
+        display: flex;
+        flex-direction: column;  
+        width: 100%;
+    }
+
+    .controls {
+        order: 1; 
+        display: flex;
+        justify-content: center; 
+        width: 100%;         
+    }
+
+    .descriptions {
+        order: 2; 
+        width: 100%;        
+    }
+
+    .controls label {
+        width: 2.5rem; 
+        height: 3rem; 
+    }
+    
+    .control-inner {
+        width: 1.5rem;
+        height: 1.5rem;        
+    }    
+    .head-item {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 350px) {
+    
+    .slider {        
+        padding: 0 3rem;
+    }
+
+    .controls {
+        margin-bottom: 1rem;   
+    }
+
+    .head-item{
+        font-size: 3rem;  
+    }
+  }
+
+
+
