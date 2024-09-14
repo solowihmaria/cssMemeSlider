@@ -140,7 +140,7 @@ input[type="radio" i] {
     width: 3rem;
     height: 3rem;
     cursor: pointer;
-    background: #c9e5c1;
+    background: #7bb56c;
     border-radius: 50%;
     transition: 0.5s;
     opacity: 0.5;
@@ -148,12 +148,12 @@ input[type="radio" i] {
 
 .controls label:hover .control-inner {
     opacity: 0.9;
-    background-color: #bae1af;
+    background-color: #cde4c1;
 }
 
 .controls label:active .control-inner {
     transform: scale(0.9); 
-    background-color: #c9e5c1;
+    background-color: #7bb56c;
 }
 
 
@@ -239,8 +239,7 @@ input[type="radio" i] {
         order: 1; 
         display: flex;
         justify-content: center; 
-        width: 100%;
-        margin-bottom: 1.5rem;   
+        width: 100%;         
     }
 
     .descriptions {
@@ -258,7 +257,7 @@ input[type="radio" i] {
         height: 1.5rem;        
     }    
     .head-item {
-        font-size: 2.7rem;
+        font-size: 3rem;
     }
 }
 
